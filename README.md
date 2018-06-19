@@ -24,3 +24,7 @@ features are:
 * Details of an Order with the route on Google Map
 
 * Weekly Revenue chart on iOS app
+
+## Credits
+
+leotrieu

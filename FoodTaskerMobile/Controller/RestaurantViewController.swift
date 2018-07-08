@@ -11,10 +11,13 @@ import UIKit
 class RestaurantViewController: UIViewController {
 
     @IBOutlet weak var menuBarButton: UIBarButtonItem!
+    @IBOutlet weak var tbvRestaurant: UITableView!
+    @IBOutlet weak var searchRestaurant: UISearchBar!
     var restaurants = [Restaurant]()
     var filteredRestaurants = [Restaurant]()
     
-    @IBOutlet weak var tbvRestaurant: UITableView!
+    let activityIndicator = UIActivityIndicatorView()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -27,6 +30,8 @@ class RestaurantViewController: UIViewController {
     }
     
     func loadRestaurants(){
+        showActivityIndicatior()
+        
         APIManager.shared.getRestaurants(){ (json) in
             if json != nil {
                 self.restaurants = []
@@ -42,6 +47,7 @@ class RestaurantViewController: UIViewController {
                         print(res.logo!)
                     }
                     self.tbvRestaurant.reloadData()
+                    self.hideActivityIndicatior()
                 }
             }
             
@@ -59,7 +65,35 @@ class RestaurantViewController: UIViewController {
             })
         }.resume()
     }
+    
+    func showActivityIndicatior(){
+        activityIndicator.frame = CGRect(x: 0.0, y: 0.0, width: 40.0, height: 40.0)
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.whiteLarge
+        activityIndicator.color = UIColor.black
+        
+        view.addSubview(activityIndicator)
+        activityIndicator.startAnimating()
+    }
+    func hideActivityIndicatior(){
+        activityIndicator.stopAnimating()
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "MealList"{
+            let controller = segue.destination as! MealListTableViewController
+            controller.restaurant = restaurants[(tbvRestaurant.indexPathForSelectedRow?.row)!]
+        }
+    }
 
+}
+extension RestaurantViewController: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        filteredRestaurants = self.restaurants.filter({ (res: Restaurant) -> Bool in
+            return res.name?.lowercased().range(of: searchText.lowercased()) != nil
+        })
+        self.tbvRestaurant.reloadData()
+    }
 }
 
 extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource{
@@ -67,19 +101,26 @@ extension RestaurantViewController: UITableViewDelegate, UITableViewDataSource{
         return 1
     }
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if searchRestaurant.text != ""{
+            return self.filteredRestaurants.count
+        }
         return self.restaurants.count
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "RestaurantCell", for: indexPath)as! RestaurantViewCell
         let restaurant: Restaurant
-        restaurant = restaurants[indexPath.row]
+        if searchRestaurant.text != ""{
+            restaurant = filteredRestaurants[indexPath.row]
+        }
+        else{
+            restaurant = restaurants[indexPath.row]
+        }
         
         cell.lbRestaurantName.text = restaurant.name!
         cell.lbRestaurantAddress.text = restaurant.address!
         
         if let logoName = restaurant.logo{
-            let url = "\(logoName)"
-            loadImage(imageView: cell.imgRestaurantLogo, urlString: url)
+            loadImage(imageView: cell.imgRestaurantLogo, urlString: "\(logoName)")
         }
         return cell
     }

@@ -11,6 +11,8 @@
 		DC2219F020A9782D00A8766E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2219EF20A9782D00A8766E /* TrayViewController.swift */; };
 		DC2219F320A97ABD00A8766E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2219F220A97ABD00A8766E /* MapKit.framework */; };
 		DC2219F520A98FE500A8766E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2219F420A98FE500A8766E /* PaymentViewController.swift */; };
+		DC43425420F2316A00D61532 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC43425320F2316A00D61532 /* Meal.swift */; };
+		DC43425620F2320600D61532 /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC43425520F2320600D61532 /* MealViewCell.swift */; };
 		DC4AC45720CD02F600A27740 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4AC45620CD02F600A27740 /* Constants.swift */; };
 		DC6423FD20C2E59F00E0A161 /* FBManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6423FC20C2E59F00E0A161 /* FBManager.swift */; };
 		DC6423FF20C2EC4000E0A161 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC6423FE20C2EC4000E0A161 /* LoginViewController.swift */; };
@@ -37,6 +39,8 @@
 		DC2219EF20A9782D00A8766E /* TrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
 		DC2219F220A97ABD00A8766E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DC2219F420A98FE500A8766E /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		DC43425320F2316A00D61532 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
+		DC43425520F2320600D61532 /* MealViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewCell.swift; sourceTree = "<group>"; };
 		DC4AC45620CD02F600A27740 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		DC55170320C2731E00666248 /* FoodTaskerMobile.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = FoodTaskerMobile.entitlements; sourceTree = "<group>"; };
 		DC6423FC20C2E59F00E0A161 /* FBManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FBManager.swift; sourceTree = "<group>"; };
@@ -97,6 +101,7 @@
 			children = (
 				DC66CE4520CA5DFC00029B54 /* User.swift */,
 				DC70932720D8E03700004888 /* Restaurant.swift */,
+				DC43425320F2316A00D61532 /* Meal.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -105,6 +110,7 @@
 			isa = PBXGroup;
 			children = (
 				DC70932920D8E4A600004888 /* RestaurantViewCell.swift */,
+				DC43425520F2320600D61532 /* MealViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -313,6 +319,7 @@
 				DC66CE4620CA5DFC00029B54 /* User.swift in Sources */,
 				DC6423FF20C2EC4000E0A161 /* LoginViewController.swift in Sources */,
 				DC6423FD20C2E59F00E0A161 /* FBManager.swift in Sources */,
+				DC43425420F2316A00D61532 /* Meal.swift in Sources */,
 				DCD0631020BABB40002CA3CF /* OrderViewController.swift in Sources */,
 				DCEF720420A6E57700AF43FE /* MealDetailsViewController.swift in Sources */,
 				DC70932820D8E03700004888 /* Restaurant.swift in Sources */,
@@ -322,6 +329,7 @@
 				DCEF720220A6C83800AF43FE /* MealListTableViewController.swift in Sources */,
 				DC9E12C020A438320049F313 /* AppDelegate.swift in Sources */,
 				DC9E12D920A466890049F313 /* CustomerMenuTableViewController.swift in Sources */,
+				DC43425620F2320600D61532 /* MealViewCell.swift in Sources */,
 				DC66CE4C20CA91FC00029B54 /* APIManager.swift in Sources */,
 				DC4AC45720CD02F600A27740 /* Constants.swift in Sources */,
 				DC2219F520A98FE500A8766E /* PaymentViewController.swift in Sources */,

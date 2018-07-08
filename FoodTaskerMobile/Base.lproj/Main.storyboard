@@ -148,6 +148,9 @@
                             <searchBar contentMode="redraw" placeholder="Search restaurant" translatesAutoresizingMaskIntoConstraints="NO" id="yKE-Pt-mq9">
                                 <rect key="frame" x="0.0" y="64" width="375" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Lm1-z3-o2T" id="MfQ-xq-Fqx"/>
+                                </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="226" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="1Ma-Gc-Crb">
                                 <rect key="frame" x="0.0" y="120" width="375" height="547"/>
@@ -236,6 +239,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="ntc-Vh-kN8" id="SyL-wQ-os1"/>
+                        <outlet property="searchRestaurant" destination="yKE-Pt-mq9" id="LEg-lc-hc2"/>
                         <outlet property="tbvRestaurant" destination="1Ma-Gc-Crb" id="c7Y-Oc-CeN"/>
                     </connections>
                 </viewController>
@@ -262,7 +266,7 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="olq-l4-tyV">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MealCell" id="olq-l4-tyV" customClass="MealViewCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="72" width="375" height="140"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="olq-l4-tyV" id="Nwt-ec-GEN">
@@ -310,6 +314,10 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="imgMealImage" destination="YKr-3h-tgM" id="sY5-dX-A04"/>
+                                    <outlet property="lbMealName" destination="tPO-hI-TSd" id="4N8-dd-CPe"/>
+                                    <outlet property="lbMealPrice" destination="QNS-4A-nhu" id="vUO-u4-R54"/>
+                                    <outlet property="lbMealShortDescription" destination="6X8-GI-90I" id="AFy-h1-W2M"/>
                                     <segue destination="cTJ-YI-emW" kind="show" identifier="MealDetails" id="G6i-Xd-vsn"/>
                                 </connections>
                             </tableViewCell>

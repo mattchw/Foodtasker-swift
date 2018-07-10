@@ -8,9 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		72C4005929CDB5001D835A82 /* Pods_FoodTaskerMobile.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECC0FDB03AC425C692AC2D1 /* Pods_FoodTaskerMobile.framework */; };
+		DC03EAAD20F4E491008A789D /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC03EAAC20F4E491008A789D /* File.swift */; };
 		DC2219F020A9782D00A8766E /* TrayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2219EF20A9782D00A8766E /* TrayViewController.swift */; };
 		DC2219F320A97ABD00A8766E /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC2219F220A97ABD00A8766E /* MapKit.framework */; };
 		DC2219F520A98FE500A8766E /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC2219F420A98FE500A8766E /* PaymentViewController.swift */; };
+		DC3D3B6A20F39A1000B372E0 /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC3D3B6920F39A1000B372E0 /* Helpers.swift */; };
 		DC43425420F2316A00D61532 /* Meal.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC43425320F2316A00D61532 /* Meal.swift */; };
 		DC43425620F2320600D61532 /* MealViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC43425520F2320600D61532 /* MealViewCell.swift */; };
 		DC4AC45720CD02F600A27740 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC4AC45620CD02F600A27740 /* Constants.swift */; };
@@ -36,9 +38,11 @@
 		779FC3A7AB77675F62575557 /* Pods-FoodTaskerMobile.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.debug.xcconfig"; sourceTree = "<group>"; };
 		AECC0FDB03AC425C692AC2D1 /* Pods_FoodTaskerMobile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FoodTaskerMobile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD49EA8EA4EFD1FCE98F1716 /* Pods-FoodTaskerMobile.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FoodTaskerMobile.release.xcconfig"; path = "Pods/Target Support Files/Pods-FoodTaskerMobile/Pods-FoodTaskerMobile.release.xcconfig"; sourceTree = "<group>"; };
+		DC03EAAC20F4E491008A789D /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 		DC2219EF20A9782D00A8766E /* TrayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewController.swift; sourceTree = "<group>"; };
 		DC2219F220A97ABD00A8766E /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		DC2219F420A98FE500A8766E /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		DC3D3B6920F39A1000B372E0 /* Helpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
 		DC43425320F2316A00D61532 /* Meal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meal.swift; sourceTree = "<group>"; };
 		DC43425520F2320600D61532 /* MealViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealViewCell.swift; sourceTree = "<group>"; };
 		DC4AC45620CD02F600A27740 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -102,6 +106,7 @@
 				DC66CE4520CA5DFC00029B54 /* User.swift */,
 				DC70932720D8E03700004888 /* Restaurant.swift */,
 				DC43425320F2316A00D61532 /* Meal.swift */,
+				DC03EAAC20F4E491008A789D /* File.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -136,6 +141,7 @@
 				DC6423FC20C2E59F00E0A161 /* FBManager.swift */,
 				DC66CE4B20CA91FC00029B54 /* APIManager.swift */,
 				DC4AC45620CD02F600A27740 /* Constants.swift */,
+				DC3D3B6920F39A1000B372E0 /* Helpers.swift */,
 			);
 			path = Manager;
 			sourceTree = "<group>";
@@ -317,9 +323,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC66CE4620CA5DFC00029B54 /* User.swift in Sources */,
+				DC3D3B6A20F39A1000B372E0 /* Helpers.swift in Sources */,
 				DC6423FF20C2EC4000E0A161 /* LoginViewController.swift in Sources */,
 				DC6423FD20C2E59F00E0A161 /* FBManager.swift in Sources */,
 				DC43425420F2316A00D61532 /* Meal.swift in Sources */,
+				DC03EAAD20F4E491008A789D /* File.swift in Sources */,
 				DCD0631020BABB40002CA3CF /* OrderViewController.swift in Sources */,
 				DCEF720420A6E57700AF43FE /* MealDetailsViewController.swift in Sources */,
 				DC70932820D8E03700004888 /* Restaurant.swift in Sources */,

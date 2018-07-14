@@ -68,5 +68,11 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This application requires location services to work.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This application requires location services to work.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This application requires location services to work.</string>
 </dict>
 </plist>

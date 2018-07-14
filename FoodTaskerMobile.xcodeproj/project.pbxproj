@@ -22,6 +22,10 @@
 		DC66CE4C20CA91FC00029B54 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC66CE4B20CA91FC00029B54 /* APIManager.swift */; };
 		DC70932820D8E03700004888 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC70932720D8E03700004888 /* Restaurant.swift */; };
 		DC70932A20D8E4A600004888 /* RestaurantViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC70932920D8E4A600004888 /* RestaurantViewCell.swift */; };
+		DC85218B20F78C3E0087A923 /* TrayViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC85218A20F78C3E0087A923 /* TrayViewCell.swift */; };
+		DC85218D20F795CB0087A923 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC85218C20F795CB0087A923 /* CoreLocation.framework */; };
+		DC8F327220F9C163004D0A7F /* OrderViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F327120F9C163004D0A7F /* OrderViewCell.swift */; };
+		DC8F327420F9FEAD004D0A7F /* DriverOrdersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC8F327320F9FEAD004D0A7F /* DriverOrdersViewController.swift */; };
 		DC9E12C020A438320049F313 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC9E12BF20A438320049F313 /* AppDelegate.swift */; };
 		DC9E12C520A438320049F313 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DC9E12C320A438320049F313 /* Main.storyboard */; };
 		DC9E12C720A438350049F313 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DC9E12C620A438350049F313 /* Assets.xcassets */; };
@@ -53,6 +57,10 @@
 		DC66CE4B20CA91FC00029B54 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		DC70932720D8E03700004888 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		DC70932920D8E4A600004888 /* RestaurantViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantViewCell.swift; sourceTree = "<group>"; };
+		DC85218A20F78C3E0087A923 /* TrayViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrayViewCell.swift; sourceTree = "<group>"; };
+		DC85218C20F795CB0087A923 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		DC8F327120F9C163004D0A7F /* OrderViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewCell.swift; sourceTree = "<group>"; };
+		DC8F327320F9FEAD004D0A7F /* DriverOrdersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DriverOrdersViewController.swift; sourceTree = "<group>"; };
 		DC9E12BC20A438320049F313 /* FoodTaskerMobile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTaskerMobile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DC9E12BF20A438320049F313 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DC9E12C420A438320049F313 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -74,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC85218D20F795CB0087A923 /* CoreLocation.framework in Frameworks */,
 				DC2219F320A97ABD00A8766E /* MapKit.framework in Frameworks */,
 				72C4005929CDB5001D835A82 /* Pods_FoodTaskerMobile.framework in Frameworks */,
 			);
@@ -94,6 +103,7 @@
 		DC2219F120A97ABD00A8766E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC85218C20F795CB0087A923 /* CoreLocation.framework */,
 				DC2219F220A97ABD00A8766E /* MapKit.framework */,
 				AECC0FDB03AC425C692AC2D1 /* Pods_FoodTaskerMobile.framework */,
 			);
@@ -116,6 +126,8 @@
 			children = (
 				DC70932920D8E4A600004888 /* RestaurantViewCell.swift */,
 				DC43425520F2320600D61532 /* MealViewCell.swift */,
+				DC85218A20F78C3E0087A923 /* TrayViewCell.swift */,
+				DC8F327120F9C163004D0A7F /* OrderViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -131,6 +143,7 @@
 				DC2219F420A98FE500A8766E /* PaymentViewController.swift */,
 				DCD0630F20BABB40002CA3CF /* OrderViewController.swift */,
 				DC6423FE20C2EC4000E0A161 /* LoginViewController.swift */,
+				DC8F327320F9FEAD004D0A7F /* DriverOrdersViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -323,6 +336,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC66CE4620CA5DFC00029B54 /* User.swift in Sources */,
+				DC8F327220F9C163004D0A7F /* OrderViewCell.swift in Sources */,
+				DC85218B20F78C3E0087A923 /* TrayViewCell.swift in Sources */,
 				DC3D3B6A20F39A1000B372E0 /* Helpers.swift in Sources */,
 				DC6423FF20C2EC4000E0A161 /* LoginViewController.swift in Sources */,
 				DC6423FD20C2E59F00E0A161 /* FBManager.swift in Sources */,
@@ -332,6 +347,7 @@
 				DCEF720420A6E57700AF43FE /* MealDetailsViewController.swift in Sources */,
 				DC70932820D8E03700004888 /* Restaurant.swift in Sources */,
 				DC2219F020A9782D00A8766E /* TrayViewController.swift in Sources */,
+				DC8F327420F9FEAD004D0A7F /* DriverOrdersViewController.swift in Sources */,
 				DC70932A20D8E4A600004888 /* RestaurantViewCell.swift in Sources */,
 				DC9E12D720A461360049F313 /* RestaurantViewController.swift in Sources */,
 				DCEF720220A6C83800AF43FE /* MealListTableViewController.swift in Sources */,

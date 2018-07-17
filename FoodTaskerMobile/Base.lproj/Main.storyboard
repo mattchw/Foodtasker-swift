@@ -151,7 +151,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverOrdersCell" id="6o7-EA-NhB">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="DriverOrdersCell" id="6o7-EA-NhB" customClass="DriverOrderCell" customModule="FoodTaskerMobile" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="122"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="6o7-EA-NhB" id="yo5-kf-La1">
@@ -222,6 +222,12 @@
                                         <constraint firstItem="lL6-ja-XPF" firstAttribute="leading" secondItem="yo5-kf-La1" secondAttribute="leading" id="Lvv-Kr-Dec"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="imgCustomerAvatar" destination="567-Ff-txX" id="Qwu-lx-awb"/>
+                                    <outlet property="lbCustomerAddress" destination="MS4-JX-i11" id="z9C-mu-oXS"/>
+                                    <outlet property="lbCustomerName" destination="6mM-8d-AZ3" id="FK4-BG-cNU"/>
+                                    <outlet property="lbRestaurantName" destination="yDE-0D-5ly" id="d7B-1F-Abf"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -234,6 +240,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="menuBarButton" destination="1KS-n5-CAB" id="qm4-m4-g9s"/>
+                        <segue destination="Fxw-o3-mIm" kind="show" identifier="CurrentDelivery" id="hSj-Zy-V5k"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jLP-dR-ODx" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -250,6 +257,9 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="iTQ-yf-2sX">
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <connections>
+                                    <outlet property="delegate" destination="Fxw-o3-mIm" id="2RV-hl-i8M"/>
+                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9RE-I1-6ir">
                                 <rect key="frame" x="8" y="609" width="359" height="50"/>
@@ -317,7 +327,13 @@
                         <barButtonItem key="leftBarButtonItem" title="Item" image="icon_menu_24dp" id="cxL-RN-mAe"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="bComplete" destination="9RE-I1-6ir" id="bFu-Cg-BAE"/>
+                        <outlet property="imgCustomerAvatar" destination="UMN-xI-6BC" id="XYS-Ex-7bG"/>
+                        <outlet property="lbCustomerAddress" destination="5mp-pO-ezC" id="8ez-A6-Sdy"/>
+                        <outlet property="lbCustomerName" destination="JGq-lT-2Iv" id="i6l-Ok-o2B"/>
+                        <outlet property="map" destination="iTQ-yf-2sX" id="gBg-f0-ZFs"/>
                         <outlet property="menuBarButton" destination="cxL-RN-mAe" id="Q0V-AG-ljX"/>
+                        <outlet property="viewinfo" destination="64L-bc-Cy2" id="oIa-JD-N4s"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Hn-Rf-46d" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1622,6 +1638,7 @@
         <segue reference="Yze-BX-b39"/>
         <segue reference="CsL-Yo-Bwf"/>
         <segue reference="K8H-xc-aqm"/>
+        <segue reference="hSj-Zy-V5k"/>
         <segue reference="QkA-0D-kl8"/>
     </inferredMetricsTieBreakers>
 </document>

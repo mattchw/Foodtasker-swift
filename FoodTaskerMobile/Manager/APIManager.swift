@@ -10,6 +10,7 @@ import Foundation
 import Alamofire
 import SwiftyJSON
 import FBSDKLoginKit
+import CoreLocation
 
 class APIManager{
     static let shared = APIManager()
@@ -117,7 +118,7 @@ class APIManager{
             }
         }
     }
-    
+    /*   Customer   */
     //API getting restaurant list
     func getRestaurants(completionHandler: @escaping (JSON) -> Void){
         let path = "api/customer/restaurants/"
@@ -168,5 +169,45 @@ class APIManager{
             "access_token": self.accessToken
         ]
         requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    //API getting driver's location
+    func getDriverLocation(completionHandler: @escaping(JSON)-> Void){
+        let path = "api/customer/driver/location/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    /*   Driver   */
+    //API get list of orders that are ready
+    func getDriverOrders(completionHandler: @escaping(JSON)-> Void){
+        let path = "api/driver/orders/ready/"
+        requestServer(.get, path, nil, URLEncoding(), completionHandler)
+    }
+    //API pick up a ready order
+    func pickOrder(orderId: Int, completionHandler: @escaping(JSON)-> Void){
+        let path = "api/driver/order/pick/"
+        let params: [String: Any] = [
+            "order_id": "\(orderId)",
+            "access_token": self.accessToken
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
+    }
+    //API get the current driver's order
+    func getCurrentDriverOrder(completionHandler: @escaping(JSON)-> Void){
+        let path = "api/driver/order/latest/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken
+        ]
+        requestServer(.get, path, params, URLEncoding(), completionHandler)
+    }
+    //API update driver's location
+    func updateLocation(location: CLLocationCoordinate2D, completionHandler: @escaping(JSON)-> Void){
+        let path = "api/driver/location/update/"
+        let params: [String: Any] = [
+            "access_token": self.accessToken,
+            "location": "\(location.latitude),\(location.longitude)"
+        ]
+        requestServer(.post, path, params, URLEncoding(), completionHandler)
     }
 }
